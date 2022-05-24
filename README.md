@@ -21,6 +21,8 @@ El porcentaje de predicción que obtuvo este modelo de aprendizaje para esta bas
 El tamaño de la prueba es de: 0.2
 El tamaño del entrenamiento: 0.8
 
+En cuanto a los experimentos planteados para los escenarios, se establecen de acuerdo a lo que propone el usuario; clasificar entre sí o no en cuanto a presentar una enfermedad cardiaca. De ellos, también se planea modificar el porcentaje del muestro de entrenamiento y prueba. Para esto, los casos quedarían: Caso 1, 70% de entrenamiento y 30% de prueba. Caso 2, 80% de entrenamiento y 20% de prueba.
+
 Los datos o bases de datos necesarias para el funcionamiento estan alojadas dentro de la carpeta simulación de este GitHub como archivos csv, las cuales son: https://github.com/Luisx30/Proyecto-Final-Simulacion-DE/blob/6a16092af1ff9a84cf81e081b64d809988f85f2e/Simulacion/heart.csv
 
 Base de datos: 
