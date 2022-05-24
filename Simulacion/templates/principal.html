@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>CAI SIMULACION</title>
+     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"> 
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="../static/js/Particles.js"></script>
+	<script src="../static/js/config.js"></script>
+	<script>
+		$(document).ready(function(){
+			
+			ActivateParticular();
+			
+		});
+	</script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles3.css')}}">
+</head>
+<body>
+     <div id="background">
+		
+	</div>
+     <div id="contenido">
+     <div class="contenedor">
+          <header>
+               <a href="/" class="logo">CAI</a>
+               <nav class="menu">
+                    <a href="/inicio">Calcular</a>
+                    <a href="/inicio2">Estadísticas</a>
+                    <a href="#">Power BI</a>
+               </nav>
+          </header>
+
+          <main>
+               <div class="contenedor-img">
+                    
+               </div>
+               <div class="contenedor-texto">
+					<!-- Forma #1 -->
+					<h2 class="titulo">Predicción de enfermedad <br> en el <span class="typed"></span></h2>
+					
+					<!-- Forma #2 -->
+						<!-- <h2 class="titulo">
+							<span class="typed"></span>
+						</h2> -->
+					<!-- <div class="titulo" id="cadenas-texto">
+						<p>Traé a HomePets <br> a tu <i class="mascota">Perro</i></p>
+						<p>Traé a HomePets <br> a tu <i class="mascota">Gato</i></p>
+						<p>Traé a HomePets <br> a tu <i class="mascota">Pez</i></p>
+					</div> -->
+
+                    <p>El proyecto consiste en generar la predicción de que una persona pueda tener una enfermedad
+                         en el corazón. Esto por medio de un clasificador binario (sí o no), basado en regresión
+                         logística, que predice un resultado con base en un conjunto de variables previas que
+                         analizó el modelo. Dichas variables se obtuvieron de una base de datos con una serie
+                         de datos de entrada diversos. Así, la clasificación se hace de acuerdo a la predicción
+                         que se haga de los datos de entrada. <br>
+                         El porcentaje de predicción que obtuvo este modelo de aprendizaje para esta base de datos es de {{PrecisionP}} % <br>
+                         El tamaño de la prueba es de: {{test}} <br>
+                         El tamaño del entrenamiento: {{train}} </p>
+                    <div class="botones">
+                         <form action="/inicio">
+                              <input class="btn-link activo" type="submit" value="Calcular">
+                         </form>
+                         <form action="/inicio2">
+                              <input class="btn-link " type="submit" value="Estadisticas">
+                         </form>
+                    </div>
+               </div>
+          </main>
+     </div>
+     </div>
+
+	 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+     <script src="../static/js/main.js"></script>
+</body>
+</html>

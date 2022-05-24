@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="/static/js/Particles.js"></script>
+	<script src="/static/js/config.js"></script>
+	<script>
+	
+		$(document).ready(function(){
+			
+			ActivateParticular();
+			
+		});
+	</script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles4.css')}}">
+</head>
+<body>
+	<header>
+        <div class="container">
+            <p class="logo">CAI!</p>
+            <nav>
+                <a href="/">Menú Principal</a>
+                <a href="/inicio">Calcular</a>
+                <a href="login.html">Power BI</a>
+            </nav>
+        </div>
+    </header>
+
+    <div id="background">
+
+	</div>
+	<div id="contenido">
+		<div id="form">
+            <h3 class="block">Estadísticas.</h3>
+            <div>
+                <label for="">Enfermedad en el corazón</label><img src="../static/grafica1.png"  width="80%" height="80%" class="center" alt="grafica">
+            </div>
+            <div>
+                <label for="">Enfermedad en el corazón por sexo</label><img src="../static/grafica2.png"  width="80%" height="80%" class="center" alt="grafica">
+            </div>
+            <div>
+                <label for="">Enfermedad corazón por dolor en pecho</label><img src="../static/grafica3.png" width="80%" height="80%" class="center" alt="grafica">
+            </div>
+            <div>
+                <label for="">Enfermedad corazón por ejercicio de Angina</label><img src="../static/grafica4.png"   width="80%" height="80%" class="center" alt="grafica">
+            </div>
+		</div>
+	</div>
+
+
+</body>
+</html>

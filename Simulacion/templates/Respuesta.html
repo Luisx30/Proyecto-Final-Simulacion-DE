@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="/static/js/Particles.js"></script>
+	<script src="/static/js/config.js"></script>
+	<script>
+	
+		$(document).ready(function(){
+			
+			ActivateParticular();
+			
+		});
+	</script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles2.css')}}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <p class="logo">CAI!</p>
+            <nav>
+                <a href="/">Menú Principal</a>
+                <a href="/inicio">Calcular</a>
+                <a href="/inicio2">Estadísticas</a>
+                <a href="login.html">Power BI</a>
+            </nav>
+        </div>
+    </header>
+
+    <div id="background">
+		
+	</div>
+	<div id="contenido">
+		<div id="form">
+            <h3 class="block">Hola, el paciente {{N}} tiene una probabilidad de {{R}} una
+                enfermedad en el corazón.</h3>
+
+            <h3 class="block">La probabilidad de que no tengas una enfermedad de corazon es {{P1}} %.</h3>
+            <h3 class="block">La probabilidad de que tengas una enfermedad de corazon es {{P2}} %.</h3>
+            <h3 class="block">Los resultados desplegados fueron debido a los siguiente datos:</h3>
+
+            <table class="block" id="tabla">
+
+                <tr>
+              
+                  <th scope="row">Variable</th>
+              
+                  <th>Dato Ingresado</th>
+              
+                </tr>
+              
+                <tr>
+                  <th>Nombre</th>
+                  <td>{{N}}</td>
+                </tr>
+
+                <tr>
+                    <th>Edad</th>
+                    <td>{{vector[0]}}</td>
+                </tr>
+
+                <tr>     
+                    <th>Sexo</th>   
+                    {% if vector[1] == 1 %}
+                    <td>Masculino</td>
+                    {% endif %}
+                    {% if vector[1] == 0 %}
+                    <td>Femenino</td>
+                    {% endif %}
+                </tr>
+
+                <tr>
+                    <th>Tipo de dolor en el pecho</th>
+                    {% if vector[2] == 0 %}
+                    <td>ATA</td>
+                    {% endif %}
+                    {% if vector[2] == 1 %}
+                    <td>NAP</td>
+                    {% endif %}
+                    {% if vector[2] == 2 %}
+                    <td>ASY</td>
+                    {% endif %}
+                    {% if vector[2] == 3 %}
+                    <td>TA</td>
+                    {% endif %}
+                </tr>
+
+                <tr>
+                    <th>PA en reposo</th>
+                    <td>{{vector[3]}}</td>
+                </tr>
+
+                <tr>
+                    <th>Colesterol</th>
+                    <td>{{vector[4]}}</td>
+                </tr>
+
+                <tr>
+                    <th>Glucemia en ayunas</th>
+                    {% if vector[5] == 1 %}
+                    <td>Si</td>
+                    {% endif %}
+                    {% if vector[5] == 0 %}
+                    <td>No</td>
+                    {% endif %}
+                </tr>
+              
+                <tr>
+                    <th>Resultados de electrocardiograma en reposo</th>
+                    {% if vector[6] == 0 %}
+                    <td>Normal</td>
+                    {% endif %}
+                    {% if vector[6] == 1 %}
+                    <td>ST</td>
+                    {% endif %}
+                    {% if vector[6] == 2 %}
+                    <td>LVH</td>
+                    {% endif %}
+                </tr>
+
+                <tr>
+                    <th>Frecuencia cardica máxima alcanzada</th>
+                    <td>{{vector[7]}}</td>
+                </tr>
+
+                <tr>
+                    <th>Angina inducida por el ejercicio</th>
+                    {% if vector[8] == 1 %}
+                    <td>Si</td>
+                    {% endif %}
+                    {% if vector[8] == 0 %}
+                    <td>No</td>
+                    {% endif %}
+                </tr>
+
+                <tr>
+                    <th>Pico</th>
+                    <td>{{vector[9]}}</td>
+                </tr>
+
+                <tr>
+                    <th>Pendiente del segmento</th>
+                    {% if vector[10] == 1 %}
+                    <td>Arriba</td>
+                    {% endif %}
+                    {% if vector[10] == 2 %}
+                    <td>Abajo</td>
+                    {% endif %}
+                    {% if vector[10] == 0 %}
+                    <td>Plano</td>
+                    {% endif %}
+                </tr>
+              
+              </table>
+		</div>
+	</div>
+
+
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAI SIMULACION</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="/static/js/Particles.js"></script>
+	<script src="/static/js/config.js"></script>
+	<script>
+	
+		$(document).ready(function(){
+			
+			ActivateParticular();
+			
+		});
+	</script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css')}}">
+</head>
+<body>
+	<header>
+        <div class="container">
+            <p class="logo">CAI!</p>
+            <nav>
+                <a href="/">Menú Principal</a>
+                <a href="/inicio2">Estadísticas</a>
+                <a href="login.html">Power BI</a>
+            </nav>
+        </div>
+    </header>
+
+   	<form action="/datos" method="post">
+	<div id="background">
+		
+	</div>
+	<div id="contenido">
+		
+		<div id="form">
+
+			<h3 class="block" >Proporciona tus datos</h3>
+
+			<div>
+				<label>Nombre: </label>
+				<input type="text" style="--i:1" class="text" placeholder="Nombre" id="Nombre"  name="Nombre" required>
+			</div>
+
+			<div>
+				<label>Edad: </label>
+				<input type="text"  style="--i:1" class="text" placeholder="Edad" id="Edad"  name="Edad" required>
+			</div>
+
+			<div>
+				<label>Sexo: </label>
+				<div class="text3">
+					<p>Masculino</p><input class="text3" type="radio" id="Sexo"  name="Sexo" value="1"> 
+					<p>Femenino</p><input class="text3" type="radio" id="Sexo"  name="Sexo" value="0"> 
+				</div>
+			</div>
+
+			<div>
+				<label for="DolorPecho">Tipo de dolor en el pecho: </label>
+				<select class="text" name="DolorPecho">
+					<option class="text2" value="0">ATA</option>
+					<option class="text2" value="1">NAP</option>
+					<option class="text2" value="2">ASY</option>
+					<option class="text2" value="3">TA</option>
+				</select>
+			</div>
+
+			<div>
+				<label>PA en reposo: </label>
+				<input type="number"  style="--i:1" class="text" placeholder="PA en reposo"  id="PA"  name="PA" required>
+			</div>
+
+			<div>
+				<label>Colesterol: </label>
+				<input type="number"  style="--i:1" class="text" placeholder="Colesterol" id="Colesterol"  name="Colesterol" required>
+			</div>
+
+			<div>
+				<label>Glucemia en ayunas: </label>
+				<div class="text3">
+					<p>Verdadero</p><input class="text3" type="radio" id="Glucemia"  name="Glucemia" value="1"> 
+					<p>Flaso</p><input class="text3" type="radio" id="Glucemia"  name="Glucemia" value="0"> 
+				</div>
+			</div>
+
+			<div>
+				<label for="Electrocardiograma">Resultados de electrocardiograma en reposo: </label>
+				<select class="text" name="Electrocardiograma">
+					<option class="text2" value="0">Normal</option>
+					<option class="text2" value="1">ST</option>
+					<option class="text2" value="2">LVH</option>
+				</select>
+			</div>
+
+			<div>
+				<label>Frecuencia cardíaca máxima alcanzada: </label>
+				<input type="number"  style="--i:1" class="text" placeholder="Valores entre 60-202" id="FrecuenciaCardiaca"  name="FrecuenciaCardiaca" min="60" max="202" required>
+			</div>
+
+			<div>
+				<label>Angina inducida por el ejercicio: </label>
+				<div class="text3">
+					<p>Verdadero</p><input class="text3" type="radio" id="Angina"  name="Angina" value="1"> 
+					<p>Flaso</p><input class="text3" type="radio" id="Angina"  name="Angina" value="0"> 
+				</div>
+			</div>
+
+			<div>
+				<label>Pico Viejo (flotantes): </label>
+				<input step="any" type="number"  style="--i:1" class="text" placeholder="Pico" id="Pico"  name="Pico" required>
+			</div>
+
+			<div>
+				<label for="Pendiente">Pendiente del segmento: </label>
+				<select style="--i:1" class="text" name="Pendiente" placeholder="Pendiene" value="pendiente">
+					<option style="--i:1" class="text2" value="1">Arriba</option>
+					<option style="--i:1" class="text2" value="2">Abajo</option>
+					<option style="--i:1" class="text2" value="0">Plano</option>
+				</select>
+			</div>
+
+            <input class="boton block" type="submit" value="Calcular">
+
+			<div id="creditos" class="block">Cardoso Azamar Izaguirre</div>
+			
+		</div>
+		
+	</div>
+    </form>
+</body>
+</html>
