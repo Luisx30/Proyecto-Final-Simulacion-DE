@@ -21,7 +21,9 @@ El porcentaje de predicción que obtuvo este modelo de aprendizaje para esta bas
 El tamaño de la prueba es de: 0.2
 El tamaño del entrenamiento: 0.8
 
-Los datos o bases de datos necesarias para el funcionamiento estan alojadas dentro de la carpeta simulación de este GitHub como archivos csv, las cialees son: https://github.com/Luisx30/Proyecto-Final-Simulacion-DE/blob/6a16092af1ff9a84cf81e081b64d809988f85f2e/Simulacion/heart.csv
+Los datos o bases de datos necesarias para el funcionamiento estan alojadas dentro de la carpeta simulación de este GitHub como archivos csv, las cuales son: https://github.com/Luisx30/Proyecto-Final-Simulacion-DE/blob/6a16092af1ff9a84cf81e081b64d809988f85f2e/Simulacion/heart.csv
+
+Base de datos: 
 
 ![Pagina Web_Ejecutado](https://github.com/Luisx30/Proyecto-Final-Simulacion-DE/blob/7c9da13c8e45f568b8927c381dc4c060496239a1/Sim.png)
 
