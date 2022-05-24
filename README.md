@@ -21,4 +21,5 @@ El porcentaje de predicción que obtuvo este modelo de aprendizaje para esta bas
 El tamaño de la prueba es de: 0.2
 El tamaño del entrenamiento: 0.8
 
+![Pagina Web_Ejecutado](https://github.com/Luisx30/Proyecto-Final-Simulacion-DE/blob/7c9da13c8e45f568b8927c381dc4c060496239a1/Sim.png)
 
